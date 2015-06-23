@@ -202,7 +202,7 @@ AssertionError                            Traceback (most recent call last)
 AssertionError:</code></pre>
 <p>Again, we get an error because we haven’t written our function, but we’re now ready to do so:</p>
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> range_overlap(ranges):
-    <span class="co">&#39;&#39;&#39;Return common overlap among a set of [low, high] ranges.&#39;&#39;&#39;</span>
+    <span class="co">&#39;&#39;&#39;Return common overlap among a list of (low, high) ranges.&#39;&#39;&#39;</span>
     lowest = <span class="fl">0.0</span>
     highest = <span class="fl">1.0</span>
     <span class="kw">for</span> (low, high) in ranges:
