@@ -58,6 +58,9 @@ Saving a plot is accomplished calling:
 ```python
 plt.savefig("output_plot.png")
 ```
+
+We can modify the analyze script as follows:
+
 ```python
 def analyze(data, filename):
 """Perform regression analysis on mosquito data
@@ -107,7 +110,7 @@ If we modify the `filename` variable in the script, we can run the analysis on o
 We need to dynamically create the name of the output files.
 First of all the `analyze` function needs to get the output figure filename as an input parameter, because at function definition we have no knowledge of what will be the name of the output file.
 
-The final version of the function will be:
+The final version of the function call will be:
 
 ```python
 def analyze(data, figure_filename):
@@ -161,12 +164,12 @@ return output
 Therefore the current version of `analyze_mosquito_data_script.py` is:
 
 ```python
-    import pandas as pd
-    import analyze_mosquito_data_lib as mosquito_lib
+import pandas as pd
+import analyze_mosquito_data_lib as mosquito_lib
 
-    filename = "A1_mosquito_data.csv"
-    data = pd.read_csv(filename)
-    mosquito_lib.analyze(data, filename)
+filename = "A1_mosquito_data.csv"
+data = pd.read_csv(filename)
+mosquito_lib.analyze(data, filename)
 ```
 
 ## Arguments from the command line
